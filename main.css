@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+/* PC */
+@media (min-width: 1024px){
+    html,body{
+        font-size: 14px;
+    }
+    .img-contact{
+        height: 100%;
+    }
+    .left-input {
+        font-size: 16px;
+    }
+    .detail-contact{
+        width: 80%;
+        margin: 32px auto;
+    }
+    .text-input,
+    .input-meseage{
+        padding: 8px;
+    }
+    .button-submit{
+        font-size: 16px;
+        padding: 12px 24px;
+        margin-top: 16px;
+    } 
+    footer.footer-band{
+        font-size: 14px;
+    }
+    .section-content{
+        padding: 0 20%;
+        height: 800px;
+    }
+    .content-img{
+        display: block;
+    }
+    #ti-align-justify{
+        display: none;
+    }
+    #ti-search{
+       padding: 12px 26px;
+    }
+    .nav-item{
+        display: inline-block;
+    }
+    footer.footer-band {
+        margin-top: 30%;
+        padding: 50px;
+    }
+    .buyticket-modal h2 {
+        font-size: 24px;
+    }
+    .container-buyticket {
+        margin-top: 16%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 25%;
+    }
+    .button-buyticket{
+        padding: 8px 16px;
+    }
+    .tour-item:last-of-type span{
+        line-height: 25px;
+        width: 25px;
+        height: 25px;
+    }
+}
+/* Table */
+@media (min-width: 740px) and (max-width: 1024px ){
+    html,body{
+        font-size: 12px;
+    }
+    .img-contact{
+        height: 90%;
+    }
+    .left-input{
+        font-size: 12px;
+    }
+    .detail-contact{
+        margin: 10% 0;
+        width: 100%;
+    }
+    .text-input,
+    .input-meseage{
+        padding: 5px;
+    } 
+    .button-submit{
+        font-size: 12px;
+        padding: 8px 18px;
+        margin-top: 14px;
+    } 
+    footer.footer-band{
+        font-size: 12px;
+    }
+    .section-content{
+        padding: 0 15%;
+        height: 650px;
+    }
+    #ti-align-justify{
+        display: none;
+    }
+    #ti-search{
+        padding: 12px 26px;
+     }
+
+     .nav-item{
+        display: inline-block;
+    }
+    
+    footer.footer-band {
+        margin-top: 40%;
+        padding: 50px;
+    }
+    .buyticket-modal h2 {
+        font-size: 22px;
+    }
+    .container-buyticket {
+        margin-top: 16%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 25%;
+    }
+    .button-buyticket{
+        padding: 8px 16px;
+    }
+    .tour-item:last-of-type span{
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+/* Mobile */
+@media (max-width: 740px ){
+    html,body{
+        font-size: 10px;
+    }
+    .left-input{
+        font-size: 10px;
+    }
+    .detail-contact{
+        margin: 10% 0;
+        width: 100%;
+    }
+    .text-input,
+    .input-meseage{
+        padding: 2px;
+    } 
+    .button-submit{
+        font-size: 10px;
+        padding: 8px 18px;
+        margin-top: 12px;
+    } 
+    .img-contact{
+        margin-top: 10%;
+        height: 70%;
+    }
+    footer.footer-band{
+        font-size: 10px;
+    }
+    .section-content{
+        padding: 0 5%;
+        height: 600px;
+    }
+    .content-img{
+        display: none;
+    }
+    .header-right i{
+       display: none;
+    }
+    #ti-align-justify{
+        padding: 18px 26px;
+        display: block;
+    }
+    #ti-search{
+        display: none;
+     }
+    .nav-item{
+        display: block;
+    }
+    footer.footer-band {
+        margin-top: 50%;
+        padding: 50px;
+    }
+    .buyticket-modal h2 {
+        font-size: 20px;
+    }
+    .container-buyticket {
+        margin-top: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
+    .button-buyticket{
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    .tour-item:last-of-type span{
+        line-height: 18px;
+        width: 20px;
+        height: 20px;
+    }
+}
+.header.show-menu{
+    overflow: visible;
+}
+.header{
+    z-index: 1;
+    background-color: #000 !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; 
+    margin-top: 48px;
+}
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    height: 100%;
+}
+.nav-item{
+    background-color: #000;
+    line-height: 24px;
+    height: 100%;
+    padding: 12px 24px;
+}
+li.nav-item > a{
+    color: #fff;
+    text-decoration: none;
+}
+li.nav-item:hover {
+    background-color: #ccc !important; /* Đổi màu nền của .nav-item */
+}
+li.nav-item:hover a {
+    color: #000; /* Đổi màu chữ của thẻ <a> */
+}
+.nav-item .sub-nav{
+    display: none;
+    position: absolute;
+    margin-top: 36px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.nav-item .sub-nav li:hover{
+    background-color: #ccc !important;
+    color: #000;
+}
+.nav-item .sub-nav a{
+    padding: 24px;
+    line-height: 47px;
+    text-decoration: none;
+    color: #000;
+}
+#more:hover .sub-nav{
+     display: inline-block;
+}
+#ti-angle-down{
+    color: #fff;
+}
+li.nav-item:hover #ti-angle-down {
+    color: #000; /* Đổi màu chữ của thẻ <a> */
+}
+#ti-search{
+    color: #fff;
+    position: fixed;
+    position: absolute;
+    line-height: 24px;
+    height: 100%;
+    right: 0;
+}
+#ti-align-justify{
+    color: #fff;
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+}
+#ti-search:hover{
+    color: #fff !important;
+    background-color: #f44336 !important;
+}
+
+.slide{
+    position: relative;
+    padding-top: 50%;
+    background: url('./img/chicago.jpg') top center / contain no-repeat;
+}
+.content-img {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 6%;
+    color: #fff;
+}
+.content{
+    background-color: black;
+    color: white; /* Đổi màu chữ để nội dung dễ đọc */
+}
+.content-img h3,
+.content-img p{
+    margin-top: 40px;
+}
+.section-content{
+    display: block;
+    text-align: center;
+}
+.sub-content{
+    top: 0;
+    padding: 32px 16px;
+}
+.contentName{
+    margin: 24px 0;
+}
+.sub-contentName{
+    margin: 15px 0px;
+    font-style: italic;
+    opacity: 0.4;
+}
+.justify-content{
+    text-align: justify !important;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+.detail-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 16px;
+    margin: 32px auto;
+    width: 100%; 
+}
+.content-third{
+    text-align: center;
+    float: left;
+    display: block;
+}
+.content-third p
+{
+    margin: 15px 0;
+}
+.content-third img
+{
+    margin: 0 16px;
+    border-radius: 5px;
+}
+.section-content:first-of-type {
+    background-color: white;
+    color: black; /* Đảm bảo nội dung dễ đọc trên nền trắng */
+}
+
+.section-content:last-of-type {
+    position: relative;
+    background-color: white;
+    color: black; /* Đảm bảo nội dung dễ đọc trên nền trắng */
+}
+.text-content-tour{
+    border: 1px solid #ccc !important;
+    background-color: #fff !important;
+    color: #000;
+    align-items: center;
+    padding: 0;
+}
+.text-content-tour .tour-item{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+    color: #757575 !important;
+    text-align: left;
+
+}
+.tour-item span{
+    background-color: #f44336;
+    color: #fff;
+}
+.tour-item:last-of-type span{
+    text-align: center;
+    border-radius: 50%;
+    background-color: #000000; 
+    color: white;
+    float: right;
+}
+.buy-ticket-tour {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    margin: 32px auto; 
+}
+.third-tiket{
+    display: block;
+    float: left;
+    color: #000;
+    width: 33.33333%;
+    margin: 0 5px;
+    margin-bottom: 16px !important;
+    background-color: #fff;
+}
+.third-tiket img:hover{
+    opacity: 0.6;
+}
+.content-third-ticket{
+    padding: 0.15px 16px;
+    text-align: left;
+}
+.content-third-ticket p,
+.button-buyticket{
+    margin: 15px 0;
+}
+.button-buyticket{
+    margin: 0 0 16px;
+    background-color: #000;
+    color: #fff;
+}
+.button-buyticket:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.detail-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    text-align: left;
+}
+
+.left-input {
+    line-height: 2;
+    color: #000;
+    width: 45%; 
+}
+
+.left-input i {
+    margin-left: 8px ;
+    margin-right: 8px;
+}
+
+.right-input {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row-input {
+    display: flex;
+    gap: 8px;
+    width: 104%;
+}
+
+.half-input {
+    margin-left: 16px;
+    width: 50%;
+}
+
+.text-input,
+.input-meseage {
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-sizing: border-box; 
+}
+
+.button-submit {
+    background-color: #000;
+    color: #fff;
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+}
+
+.button-submit:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* Đặt overlay tối mờ phía sau modal */
+.modal-buyticket {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; 
+    display: flex;
+}
+
+.container-buyticket {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header của modal */
+.buyticket-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.buyticket-modal h2 {
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.buyticket-modal .w3-button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #009688; /* Màu teal */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Nội dung chính của modal */
+.content-buy-ticket {
+    text-align: left;
+}
+
+.content-buy-ticket p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #444;
+}
+
+.input-price,
+.input-email-buyticket {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
+}
+
+.button-buyticket-pay {
+    background-color: #009688;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button-buyticket-pay:hover {
+    background-color: #00796B;
+}
+
+.right-buyticket {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.right-buyticket a {
+    color: #009688;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right-buyticket a:hover {
+    text-decoration: underline;
+}
+
+/* Hiệu ứng fade-in khi modal mở */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.img-contact{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: url(./img/map.jpg) bottom center / cover no-repeat;
+    overflow: clip;
+    box-sizing: inherit;
+}
+footer.footer-band {
+    margin-bottom: 0; 
+    background-color: #fff; 
+    color: #000; /* Màu chữ */
+    text-align: center; 
+  }
+  
+  footer.footer-band i {
+    margin: 0 8px; /* Khoảng cách giữa các icon */
+    cursor: pointer; /* Thêm hiệu ứng con trỏ chuột */
+  }
+  
+  footer.footer-band i:hover {
+    color: #ccc; /* Đổi màu icon khi hover */
+  }
+  
+  footer.footer-band a {
+    color: #1e90ff; /* Màu link */
+    text-decoration: none; /* Bỏ gạch chân */
+  }
+  
+  footer.footer-band a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+  }
