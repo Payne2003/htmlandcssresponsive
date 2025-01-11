@@ -250,12 +250,18 @@ li.nav-item > a{
     text-decoration: none;
 }
 li.nav-item:hover {
-    background-color: #ccc;
+    background-color: #ccc !important; /* Đổi màu nền của .nav-item */
 }
 li.nav-item:hover a {
-    color: #000;
+    color: #000; /* Đổi màu chữ của thẻ <a> */
 }
-.nav-item .sub-nav{
+
+#more.nav-item{
+    position: relative;
+}
+
+#more.nav-item .sub-nav{
+    z-index: 1;
     display: none;
     position: absolute;
     margin-top: 36px;
@@ -263,11 +269,11 @@ li.nav-item:hover a {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.sub-nav li:hover{
+#more.nav-item .sub-nav li:hover{
     background-color: #ccc !important;
     color: #000;
 }
-.nav-item .sub-nav a{
+#more.nav-item .sub-nav a{
     padding: 24px;
     line-height: 47px;
     text-decoration: none;
@@ -276,6 +282,9 @@ li.nav-item:hover a {
 #more:hover .sub-nav{
      display: inline-block;
 }
+
+
+
 #ti-angle-down{
     color: #fff;
 }
